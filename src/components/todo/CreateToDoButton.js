@@ -24,15 +24,15 @@ const CreateToDoButton = () => {
 
     const createToDo = (data) => {
         const {title, contents} = parseData(data);
-
-        // axios POST /todo
+        
         axios.post("/todo", {
             title: title,
             contents: contents
         })
-            .then((response)=>{
+            .then((response) => {
                 console.log(response.data);
-            })
+            });
+        window.location.replace("/");
     }
 
     const handleOk = ({data, initializeData}) => {
