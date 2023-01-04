@@ -4,18 +4,17 @@ import EmptyList from "./todo/EmptyList";
 import ToDoList from "./todo/ToDoList";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import useDeepCompareEffect from "use-deep-compare-effect";
 
 const {Content} = Layout;
 const AppContent = () => {
     const [dataList, setDataList] = useState([]);
 
-    useDeepCompareEffect(()=>{
+    useEffect(()=>{
         axios.get("/todos")
             .then(response => {
                 setDataList(response.data);
             })
-    }, [dataList])
+    }, [])
 
     const RenderDataList = ()=>{
         if(dataList.length === 0){
