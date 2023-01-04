@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'antd/dist/reset.css';
 import axios from "axios";
 
-axios.defaults.baseURL = 'http://localhost:8080';
+axios.defaults.baseURL = '/api';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
