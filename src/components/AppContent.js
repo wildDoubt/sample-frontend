@@ -30,7 +30,7 @@ const AppContent = () => {
         </Space>
         <Space direction="horizontal" style={spaceStyle}>
             <Image
-                src="https://wonyeong-web-23489273498.s3.ap-northeast-2.amazonaws.com/images/web-architecture.png"
+                src="images/web-architecture.png"
                 width="15%"/>
         </Space>
     </Content>
