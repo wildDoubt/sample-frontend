@@ -28,7 +28,7 @@ const AppContent = () => {
         <Space direction="horizontal" style={spaceStyle}>
             <RenderDataList/>
         </Space>
-        <Typography.Title>인스턴스 ID: {process.env.REACT_APP_INSTANCE_ID}</Typography.Title>
+        <Typography.Title>{process.env.REACT_APP_INSTANCE_AZ} - {process.env.REACT_APP_INSTANCE_ID}</Typography.Title>
     </Content>
 }
 
