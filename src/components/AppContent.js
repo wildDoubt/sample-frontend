@@ -1,4 +1,4 @@
-import {Layout, Space} from "antd";
+import {Layout, Space, Typography} from "antd";
 import {spaceStyle} from "../styles";
 import EmptyList from "./todo/EmptyList";
 import ToDoList from "./todo/ToDoList";
@@ -13,7 +13,7 @@ const AppContent = () => {
         axios.get("/todos")
             .then(response => {
                 setDataList(response.data);
-            })
+            });
     }, [])
 
     const RenderDataList = ()=>{
@@ -28,6 +28,7 @@ const AppContent = () => {
         <Space direction="horizontal" style={spaceStyle}>
             <RenderDataList/>
         </Space>
+        <Typography.Title>인스턴스 ID: {process.env.REACT_APP_INSTANCE_ID}</Typography.Title>
     </Content>
 }
 
